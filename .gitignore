@@ -6,6 +6,10 @@ claude.md
 *claude*
 .ai/
 
+# 内部文件 - 不应上传
+GITHUB_UPLOAD_CHECKLIST.md
+*_CHECKLIST.md
+
 # Git 信息文件
 git.txt
 *git.txt
