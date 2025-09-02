@@ -1,0 +1,112 @@
+# Claude Code 相关文件 - 绝对不能上传
+.claude/
+*.claude
+CLAUDE.md
+claude.md
+*claude*
+.ai/
+
+# Git 信息文件
+git.txt
+*git.txt
+*.git.txt
+
+# Dependencies
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables - 绝对不能上传
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local  
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory
+coverage/
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Parcel cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build output
+.nuxt
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Sensitive data
+*secret*
+*password*
+*private_key*
+*service-account*.json
+*credentials*.json
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

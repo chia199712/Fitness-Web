@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 確保基本樣式正常 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* 自定義Tailwind組件 */
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-fitness-600 to-fitness-800 bg-clip-text text-transparent;
+  }
+  
+  .bg-fitness-gradient {
+    @apply bg-gradient-to-r from-fitness-600 to-fitness-700;
+  }
+  
+  .bg-success-gradient {
+    @apply bg-gradient-to-r from-success-500 to-success-600;
+  }
+  
+  .bg-energy-gradient {
+    @apply bg-gradient-to-r from-energy-500 to-energy-600;
+  }
+  
+  .bg-danger-gradient {
+    @apply bg-gradient-to-r from-danger-500 to-danger-600;
+  }
+  
+  .shadow-fitness {
+    @apply shadow-lg;
+    box-shadow: 0 10px 25px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -2px rgba(59, 130, 246, 0.05);
+  }
+  
+  .shadow-success {
+    @apply shadow-lg;
+    box-shadow: 0 10px 25px -3px rgba(34, 197, 94, 0.1), 0 4px 6px -2px rgba(34, 197, 94, 0.05);
+  }
+  
+  .shadow-card {
+    @apply shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+}
+
+/* 自定義工具類 */
+@layer utilities {
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+}
+
+/* 動畫關鍵幀 */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.2), 0 0 10px rgba(59, 130, 246, 0.2), 0 0 15px rgba(59, 130, 246, 0.2);
+  }
+  to {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4), 0 0 20px rgba(59, 130, 246, 0.4), 0 0 30px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 確保自定義顏色被生成 */
+.text-fitness-600 { color: #2563eb; }
+.bg-fitness-50 { background-color: #eff6ff; }
+.bg-fitness-100 { background-color: #dbeafe; }
+.bg-fitness-200 { background-color: #bfdbfe; }
+.bg-fitness-500 { background-color: #3b82f6; }
+.bg-fitness-600 { background-color: #2563eb; }
+.border-fitness-200 { border-color: #bfdbfe; }
+.border-fitness-500 { border-color: #3b82f6; }
+
+/* 響應式設計輔助 */
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom { padding: 0 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .container-custom { padding: 0 2rem; }
+}
